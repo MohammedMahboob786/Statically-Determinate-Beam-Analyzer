@@ -591,7 +591,7 @@ def simply_supported_beam():
     st.title("Simply Supported Beam Analysis Tool")
 
     # Input parameters
-    span = st.text_input("Enter the span of the beam in meters:")
+    span = st.number_input("Enter the span of the beam in meters:")
     A = 0
     B = span
     st.subheader("Ensure units are in 'm' and 'kN'.")
