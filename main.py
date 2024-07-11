@@ -2023,9 +2023,9 @@ def main():
 
 def display_home():
     col1,_, col2,_, col3 = st.columns(5)
-    cantiliver = Image.open("D:\Statically Determinate Beams\Streamlit app\cantiliver.png")
-    simply_supported = Image.open("D:\Statically Determinate Beams\Streamlit app\simply_supported.png")
-    overhang = Image.open("D:\Statically Determinate Beams\Streamlit app\overhang.png")
+    cantiliver = Image.open("images/cantiliver.png")
+    simply_supported = Image.open("images/simply_supported.png")
+    overhang = Image.open("images/overhang.png")
     with col1:
         st.image(cantiliver, use_column_width=True, channels="RGB")
         st.markdown("<div style='text-align: center; margin-top: 10px;'>", unsafe_allow_html=True)
