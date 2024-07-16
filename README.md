@@ -7,8 +7,11 @@ This Streamlit application provides an interactive tool for analyzing different 
 - **Cantilever Beam Analysis**
 - **Simply Supported Beam Analysis**
 - **Overhang Beam Analysis**
-- Interactive plots for Shear Force, Bending Moment, and Deflection
-- Easy navigation between different beam types
+    - Interactive plots for Shear Force, Bending Moment, and Deflection
+    - Easy navigation between different beam types
+
+## Live Link
+https://statically-determinate-beam-analyzer-fkcmgv8zjdy5xjvjwdjb92.streamlit.app/
 
 ## File Structure
 1. app.py: Main application script containing the Streamlit app logic.
