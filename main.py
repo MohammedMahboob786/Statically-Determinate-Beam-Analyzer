@@ -557,7 +557,7 @@ def cantilever_beam():
                 'yanchor': 'top'},
             titlefont=dict(size=15),
             yaxis = dict(
-                title='Deflection'
+                title='Deflection (m)'
             ),
             xaxis = dict(
                 title='Distance (m)',       
@@ -1269,7 +1269,7 @@ def simply_supported_beam():
                 'yanchor': 'top'},
             titlefont=dict(size=15),
             yaxis = dict(
-                title='Deflection'
+                title='Deflection (m)'
             ),
             xaxis = dict(
                 title='Distance (m)',       
@@ -1996,7 +1996,7 @@ def overhang_beam():
                 'yanchor': 'top'},
             titlefont=dict(size=15),
             yaxis = dict(
-                title='Deflection'
+                title='Deflection (m)'
             ),
             xaxis = dict(
                 title='Distance (m)',       
