@@ -4,8 +4,9 @@ import plotly.graph_objects as go
 import ast
 from PIL import Image
 
+
 # Set page config
-st.set_page_config(page_title="Beam Analysis Tool", page_icon="🔧")
+st.set_page_config(page_title="Beam Analysis Tool", page_icon="🔧",layout="wide")
 
 
 # Function for Cantilever Beam Analysis
@@ -419,7 +420,7 @@ def cantilever_beam():
         layout = go.Layout(
             title={
                 'text': "Shear Force Diagram",
-                'y':0.85,
+                'y':0.90,
                 'x':0.5,
                 'xanchor': 'center',
                 'yanchor': 'top'},
@@ -455,14 +456,17 @@ def cantilever_beam():
 
         #Generate and view the figure
         fig = go.Figure(data=[line, axis], layout=layout)
-        st.plotly_chart(fig)
+        fig.update_layout(
+        autosize=True,
+        margin=dict(l=20, r=20, t=60, b=20))
+        st.plotly_chart(fig, use_container_width=True)
       
       
         
         layout = go.Layout(
         title={
             'text': "Bending Moment Diagram",
-            'y':0.85,
+            'y':0.90,
             'x':0.5,
             'xanchor': 'center',
             'yanchor': 'top'},
@@ -499,7 +503,10 @@ def cantilever_beam():
 
         #Generate and view the figure
         fig = go.Figure(data=[line, axis], layout=layout)
-        st.plotly_chart(fig)
+        fig.update_layout(
+        autosize=True,
+        margin=dict(l=20, r=20, t=60, b=20))
+        st.plotly_chart(fig, use_container_width=True)
         
         
         deltaRot = 0.000005
@@ -544,13 +551,13 @@ def cantilever_beam():
         layout = go.Layout(
             title={
                 'text': "Deflection",
-                'y':0.85,
+                'y':0.90,
                 'x':0.5,
                 'xanchor': 'center',
                 'yanchor': 'top'},
             titlefont=dict(size=15),
             yaxis = dict(
-                title='Deflection'
+                title='Deflection (m)'
             ),
             xaxis = dict(
                 title='Distance (m)',       
@@ -580,7 +587,10 @@ def cantilever_beam():
 
         #Generate and view the figure
         fig = go.Figure(data=[line,axis], layout=layout)
-        st.plotly_chart(fig)   
+        fig.update_layout(
+        autosize=True,
+        margin=dict(l=20, r=20, t=60, b=20))
+        st.plotly_chart(fig, use_container_width=True)   
 
         max_deflection=abs(min(Deflection))
         st.write("Maximum vertical deflection in downward direction:",round(max_deflection,5), " m")
@@ -1061,7 +1071,7 @@ def simply_supported_beam():
         layout = go.Layout(
             title={
                 'text': "Shear Force Diagram",
-                'y':0.85,
+                'y':0.90,
                 'x':0.5,
                 'xanchor': 'center',
                 'yanchor': 'top'},
@@ -1097,14 +1107,17 @@ def simply_supported_beam():
 
         #Generate and view the figure
         fig = go.Figure(data=[line, axis], layout=layout)
-        st.plotly_chart(fig)
+        fig.update_layout(
+        autosize=True,
+        margin=dict(l=20, r=20, t=60, b=20))
+        st.plotly_chart(fig, use_container_width=True)
       
       
         
         layout = go.Layout(
         title={
             'text': "Bending Moment Diagram",
-            'y':0.85,
+            'y':0.90,
             'x':0.5,
             'xanchor': 'center',
             'yanchor': 'top'},
@@ -1141,7 +1154,10 @@ def simply_supported_beam():
 
         #Generate and view the figure
         fig = go.Figure(data=[line, axis], layout=layout)
-        st.plotly_chart(fig)
+        fig.update_layout(
+        autosize=True,
+        margin=dict(l=20, r=20, t=60, b=20))
+        st.plotly_chart(fig, use_container_width=True)
         
         deltaRot = 0.000005
         initRot = -0.00021       
@@ -1247,13 +1263,13 @@ def simply_supported_beam():
         layout = go.Layout(
             title={
                 'text': "Deflection",
-                'y':0.85,
+                'y':0.90,
                 'x':0.5,
                 'xanchor': 'center',
                 'yanchor': 'top'},
             titlefont=dict(size=15),
             yaxis = dict(
-                title='Deflection'
+                title='Deflection (m)'
             ),
             xaxis = dict(
                 title='Distance (m)',       
@@ -1282,7 +1298,10 @@ def simply_supported_beam():
         )
         #Generate and view the figure
         fig = go.Figure(data=[line,axis], layout=layout)
-        st.plotly_chart(fig)   
+        fig.update_layout(
+        autosize=True,
+        margin=dict(l=20, r=20, t=60, b=20))
+        st.plotly_chart(fig, use_container_width=True)   
 
         max_deflection=abs(min(Deflection))
         st.write("Maximum vertical deflection in downward direction:",round(max_deflection,5), " m")
@@ -1753,7 +1772,7 @@ def overhang_beam():
         layout = go.Layout(
             title={
                 'text': "Shear Force Diagram",
-                'y':0.85,
+                'y':0.90,
                 'x':0.5,
                 'xanchor': 'center',
                 'yanchor': 'top'},
@@ -1789,14 +1808,17 @@ def overhang_beam():
 
         #Generate and view the figure
         fig = go.Figure(data=[line, axis], layout=layout)
-        st.plotly_chart(fig)
+        fig.update_layout(
+        autosize=True,
+        margin=dict(l=20, r=20, t=60, b=20))
+        st.plotly_chart(fig, use_container_width=True)
       
       
         
         layout = go.Layout(
         title={
             'text': "Bending Moment Diagram",
-            'y':0.85,
+            'y':0.90,
             'x':0.5,
             'xanchor': 'center',
             'yanchor': 'top'},
@@ -1833,7 +1855,10 @@ def overhang_beam():
 
         #Generate and view the figure
         fig = go.Figure(data=[line, axis], layout=layout)
-        st.plotly_chart(fig)
+        fig.update_layout(
+        autosize=True,
+        margin=dict(l=20, r=20, t=60, b=20))
+        st.plotly_chart(fig, use_container_width=True)
         
         deltaRot = 0.000005
         initRot = -0.00021       
@@ -1965,13 +1990,13 @@ def overhang_beam():
         layout = go.Layout(
             title={
                 'text': "Deflection",
-                'y':0.85,
+                'y':0.90,
                 'x':0.5,
                 'xanchor': 'center',
                 'yanchor': 'top'},
             titlefont=dict(size=15),
             yaxis = dict(
-                title='Deflection'
+                title='Deflection (m)'
             ),
             xaxis = dict(
                 title='Distance (m)',       
@@ -2000,7 +2025,10 @@ def overhang_beam():
         )
         #Generate and view the figure
         fig = go.Figure(data=[line,axis], layout=layout)
-        st.plotly_chart(fig)   
+        fig.update_layout(
+        autosize=True,
+        margin=dict(l=20, r=20, t=60, b=20))
+        st.plotly_chart(fig, use_container_width=True)   
 
         max_deflection=abs(min(Deflection))
         st.write("Maximum vertical deflection in downward direction:",round(max_deflection,5), " m")
@@ -2023,9 +2051,9 @@ def main():
 
 def display_home():
     col1,_, col2,_, col3 = st.columns(5)
-    cantiliver = Image.open("D:\Statically Determinate Beams\Streamlit app\cantiliver.png")
-    simply_supported = Image.open("D:\Statically Determinate Beams\Streamlit app\simply_supported.png")
-    overhang = Image.open("D:\Statically Determinate Beams\Streamlit app\overhang.png")
+    cantiliver = Image.open("images/cantiliver.png")
+    simply_supported = Image.open("images/simply_supported.png")
+    overhang = Image.open("images/overhang.png")
     with col1:
         st.image(cantiliver, use_column_width=True, channels="RGB")
         st.markdown("<div style='text-align: center; margin-top: 10px;'>", unsafe_allow_html=True)
